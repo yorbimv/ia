@@ -1,0 +1,15 @@
+FROM ubuntu:22.04
+
+# Instalar dependencias
+RUN apt-get update && apt-get install -y curl bash git ca-certificates && rm -rf /var/lib/apt/lists/*
+
+# Instalación oficial
+RUN curl -fsSL https://opencode.ai/install | bash
+
+# BUSCAR Y MOVER: No confiamos en el instalador, buscamos el binario nosotros mismos
+RUN TARGET_BIN=$(find / -name opencode -type f -executable | grep -v "proc" | head -n 1) && \
+    cp "$TARGET_BIN" /usr/bin/opencode && \
+    chmod +x /usr/bin/opencode
+
+WORKDIR /src
+ENTRYPOINT ["/usr/bin/opencode"]
