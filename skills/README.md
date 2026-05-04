@@ -26,6 +26,20 @@ npx skills add https://github.com/vercel-labs/skills --skill find-skills -a open
 - **Buscar skills:** `npx skills find`
 - **Descubrir más:** [https://skills.sh/](https://skills.sh/)
 
+## Skills Recomendados
+
+Herramientas esenciales de la comunidad que mejoran drásticamente el flujo de trabajo:
+
+| Skill | Descripción | Comando de Instalación |
+|-------|-------------|------------------------|
+| **🦴 Caveman** | Reduce el uso de tokens en ~75%. La IA responde de forma ultra concisa ("habla como cavernícola inteligente") sin perder precisión técnica. Ideal para ahorrar costos y leer más rápido. | `npx skills add juliusbrussee/caveman -a opencode` |
+| **🔍 Find Skills** | Permite buscar y descubrir nuevos skills directamente desde la terminal o el chat de la IA. | `npx skills add vercel-labs/skills --skill find-skills -a opencode` |
+
+**Sub-herramientas de Caveman:**
+- `/caveman-commit`: Genera mensajes de commit cortos y limpios.
+- `/caveman-review`: Revisiones de código de una sola línea (ej: `L42: 🔴 bug: null check`).
+- `/caveman:compress`: Comprime archivos de memoria (como `CLAUDE.md`) para ahorrar tokens de entrada.
+
 ## Skills por IA
 
 En esta carpeta encontrarás las configuraciones base (manuales) adaptadas para cada herramienta, listas para ser usadas como contexto o como base para crear tus propios skills.
