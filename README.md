@@ -31,6 +31,26 @@ Herramientas esenciales para mantener el flujo de trabajo moderno y eficiente:
 
 ---
 
+## Automatización con OpenCode GitHub
+
+Este repositorio está integrado con el **Agente de OpenCode** para automatizar el mantenimiento y la generación de contenido.
+
+### ¿Qué hace?
+El comando `opencode github install` transforma este repo en una herramienta viva. Instala un Workflow de GitHub Actions que permite a la IA "escuchar" Issues y Pull Requests para ejecutar tareas sin abrir la terminal.
+
+### Casos de uso en este proyecto:
+1. **Generación de Contenido desde Issues:** Abre un Issue con `/opencode crea un nuevo prompt para [tema]` y la IA generará el archivo y abrirá un Pull Request.
+2. **Revisión Automática de PRs:** La IA valida que los nuevos prompts o skills cumplan con la estructura y filosofía definida en este repo.
+3. **Mantenimiento:** Actualización automática de índices y READMEs cuando se agregan nuevos archivos.
+
+### Instalación
+```bash
+opencode github install
+```
+*(Este comando configura el workflow y la App de GitHub automáticamente).*
+
+---
+
 ## Filosofía de Trabajo
 
 > *"Si no está en el contexto, no existe para la IA."*
