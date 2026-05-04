@@ -47,6 +47,39 @@ En el contexto de desarrollo de software, un buen prompt transforma una IA gené
 
 ---
 
+## Skills para Todas las IAs (Ecosistema Open)
+
+Además de los prompts manuales, existe un **ecosistema estándar de Skills** compatible con OpenCode, Claude Code, Cursor, Gemini, Windsurf y más.
+
+Un **Skill** es un paquete modular de instrucciones que potencia la IA con conocimientos específicos (ej: guías de diseño, mejores prácticas de seguridad, patrones de arquitectura).
+
+### ¿Cómo instalar y usar Skills?
+
+Usamos la CLI `npx skills` de [vercel-labs/skills](https://github.com/vercel-labs/skills).
+
+#### Instalación
+Ejecuta en tu terminal el siguiente comando. Puedes especificar a qué IA quieres aplicarlo usando el flag `-a`.
+
+```bash
+npx skills add <repositorio> --skill <nombre-del-skill> -a <agente>
+```
+
+#### Ejemplo práctico: "Find Skills"
+Para instalar el skill que te ayuda a buscar otros skills directamente desde tu IA:
+
+```bash
+npx skills add https://github.com/vercel-labs/skills --skill find-skills -a opencode
+```
+
+Una vez instalado, el agente de IA cargará automáticamente las instrucciones definidas en el skill.
+
+#### Comandos útiles
+- **Listar skills instalados:** `npx skills list`
+- **Buscar nuevos skills:** `npx skills find`
+- **Instalar para todos los agentes:** `npx skills add <repo> --skill <nombre>` (omite el flag `-a`)
+
+---
+
 ## Filosofía de Trabajo (Aplica a todas las IAs)
 
 Cada carpeta contiene un `base-manual.md` basado en el **Manual del Arquitecto de IA** que establece los principios fundamentales:
