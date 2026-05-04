@@ -7,10 +7,10 @@ El objetivo es simple: **dejar de depender de la suerte y empezar a depender de 
 ## Estructura del Repositorio
 
 ### 📂 [prompts/](prompts/)
-Aquí residen los **"drivers" diarios**. Son los archivos de contexto maestro que configuran el comportamiento del modelo antes de escribir una sola línea de código.
+Aquí residen los **"drivers" diarios**. La carpeta está organizada por **entorno de desarrollo** (OpenCode, Cursor, Claude, etc.) para que localices rápidamente la configuración adecuada.
 
-*   **Contenido:** Prompts de arquitectura, reglas de DevOps, pipelines de CI/CD, y manuales de estilo para cada agente.
-*   **Uso:** Se cargan al inicio de la sesión o se configuran como `CLAUDE.md` / `.cursorrules` para establecer el tono y las restricciones del proyecto.
+*   **Contenido:** Archivos `prompt.md` por herramienta que definen el rol, reglas de arquitectura y flujos de validación.
+*   **Uso:** Se cargan al inicio de la sesión para transformar a la IA en un Arquitecto Senior.
 
 ### 📂 [skills/](skills/)
 El cerebro modular del sistema. Esta carpeta alberga la documentación y estructura para el ecosistema estándar de **Skills** (`npx skills`).
